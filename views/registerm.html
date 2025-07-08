@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Semanal por Módulo</title>
+    <link rel="stylesheet" href="/assets/css/.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        table, th, td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+
+        .form-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        input[type="number"] {
+            width: 80px;
+        }
+
+        .form-group {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <!-- Brand -->
+        <div class="navbar__brand">
+            <img src="../assets/img/logo.avif" alt="Logo" class="navbar__logo" style="height: 50px; width: 50px;">
+            <h1 class="navbar__title">Manufacturas Zuluaga</h1>
+        </div>
+
+        <!-- Menu -->
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="../views/menu.php" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link" onclick="toggleDropdown(event)">Incentivos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../views/registerm.php" class="dropdown-item">Incentivo Modular</a></li>
+                    <li><a href="../views/registerp.php" class="dropdown-item">Incentivo Precilla</a></li>
+                </ul>
+            </li>
+            <li class="navbar__item"><a href="../views/login.php" class="navbar__link">Registro</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Gráficos</a></li>
+        </ul>
+
+        <!-- Button -->
+        <div class="navbar__button">
+            <a href="../views/menu.html" class="btn">Volver al Inicio</a>
+        </div>
+    </nav>
+</header>
+
+
+    <div class="form-container">
+        <center>
+            <h2>Semana 1</h2>
+            <p>Incentivos del: <strong>2024-05-13</strong> al <strong>2024-05-18</strong></p>
+        </center>
+
+        <form id="registroForm" action="#" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Módulo</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Ejemplo módulo 12 -->
+                    <tr>
+                        <td>12</td>
+                        <td><input type="number" name="lunes[12][]" placeholder="0" value="90"></td>
+                        <td><input type="number" name="martes[12][]" placeholder="0" value="88"></td>
+                        <td><input type="number" name="miercoles[12][]" placeholder="0" value="85"></td>
+                        <td><input type="number" name="jueves[12][]" placeholder="0" value="87"></td>
+                        <td><input type="number" name="viernes[12][]" placeholder="0" value="89"></td>
+                        <td><input type="number" name="sabado[12][]" placeholder="0" value="92"></td>
+                        <td>--- <!-- Se puede calcular con JS si quieres --></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>5000</td>
+                        <td>4800</td>
+                        <td>4700</td>
+                        <td>4600</td>
+                        <td>4900</td>
+                        <td>5100</td>
+                        <td>29100</td>
+                    </tr>
+
+                    <!-- Puedes duplicar bloques como este con otros módulos -->
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <button type="submit">Guardar Registro</button>
+                <button type="button" onclick="reiniciarFormulario()">Reiniciar</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+  <div class="footer-content">
+    <h3>Manufacturas Zuluaga S.A.S</h3>
+    <p>Comprometidos en el desarrollo social, personal y laboral.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 @Juandv.</p>
+  </div>
+</footer>
+    <script>
+        function reiniciarFormulario() {
+            const inputs = document.querySelectorAll('input[type="number"]');
+            inputs.forEach(input => input.value = '');
+        }
+    </script>
+</body>
+
+</html>
