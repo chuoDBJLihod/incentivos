@@ -5,11 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+
     <!-- Incluir la librería de SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
-    <?php include "../includes/header.php"; ?>
+<header class="header">
+    <nav class="navbar">
+        <!-- Brand -->
+        <div class="navbar__brand">
+            <img src="../assets/img/logo.avif" alt="Logo" class="navbar__logo" style="height: 50px; width: 50px;">
+            <h1 class="navbar__title">Manufacturas Zuluaga</h1>
+        </div>
+
+        <!-- Menu -->
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="../views/menu.php" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link" onclick="toggleDropdown(event)">Incentivos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../views/registerm.php" class="dropdown-item">Incentivo Modular</a></li>
+                    <li><a href="../views/registerp.php" class="dropdown-item">Incentivo Precilla</a></li>
+                </ul>
+            </li>
+            <li class="navbar__item"><a href="../views/login.php" class="navbar__link">Registro</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Gráficos</a></li>
+        </ul>
+
+        <!-- Button -->
+        <div class="navbar__button">
+            <a href="../views/menu.html" class="btn">Volver al Inicio</a>
+        </div>
+    </nav>
+</header>
 
     <div class="form-container">
         <h2>Registro de Usuario</h2>
@@ -81,6 +111,20 @@
         }
     }
     ?>
-
+    <footer>
+  <div class="footer-content">
+    <h3>Manufacturas Zuluaga S.A.S</h3>
+    <p>Comprometidos en el desarrollo social, personal y laboral.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 @Juandv.</p>
+  </div>
+</footer>
 </body>
 </html>
