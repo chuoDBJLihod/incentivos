@@ -75,42 +75,6 @@
         </form>
     </div>
 
-    <?php include "../includes/footer.php"; ?>
-
-    <!-- Mostrar notificaciones SweetAlert basadas en el estado del registro -->
-    <?php
-    if (isset($_GET['status'])) {
-        $status = $_GET['status'];
-        if ($status == "success") {
-            echo "<script>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Registro Exitoso',
-                    text: 'El usuario ha sido registrado correctamente.',
-                    confirmButtonText: 'OK'
-                });
-            </script>";
-        } elseif ($status == "exists") {
-            echo "<script>
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Usuario Ya Registrado',
-                    text: 'Este usuario ya está registrado en el sistema.',
-                    confirmButtonText: 'OK'
-                });
-            </script>";
-        } elseif ($status == "error") {
-            echo "<script>
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error en el Registro',
-                    text: 'Hubo un error al intentar registrar al usuario.',
-                    confirmButtonText: 'OK'
-                });
-            </script>";
-        }
-    }
-    ?>
     <footer>
   <div class="footer-content">
     <h3>Manufacturas Zuluaga S.A.S</h3>
