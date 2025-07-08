@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Usuarios Precilla</title>
+  <link rel="stylesheet" href="../assets/css/heder.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f9;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tr:hover {
+      background-color: #ddd;
+    }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <!-- Brand -->
+        <div class="navbar__brand">
+            <img src="../assets/img/logo.avif" alt="Logo" class="navbar__logo" style="height: 50px; width: 50px;">
+            <h1 class="navbar__title">Manufacturas Zuluaga</h1>
+        </div>
+
+        <!-- Menu -->
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="../views/menu.php" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link" onclick="toggleDropdown(event)">Incentivos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../views/registerm.php" class="dropdown-item">Incentivo Modular</a></li>
+                    <li><a href="../views/registerp.php" class="dropdown-item">Incentivo Precilla</a></li>
+                </ul>
+            </li>
+            <li class="navbar__item"><a href="../views/login.php" class="navbar__link">Registro</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Gráficos</a></li>
+        </ul>
+
+        <!-- Button -->
+        <div class="navbar__button">
+            <a href="../views/menu.html" class="btn">Volver al Inicio</a>
+        </div>
+    </nav>
+</header>
+
+  <h2>Precilla</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Módulo</th>
+        <th>Nombre de Usuario</th>
+        <th>13/05 al 18/05</th>
+        <th>20/05 al 25/05</th>
+        <th>27/05 al 01/06</th>
+        <th>03/06 al 08/06</th>
+        <th>Total</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Fila ejemplo 1 -->
+      <tr>
+        <td>1</td>
+        <td>María Gómez</td>
+        <td>4000</td>
+        <td>5000</td>
+        <td>4500</td>
+        <td>6000</td>
+        <td>19500</td>
+        <td>
+          <a href="#">Editar</a> |
+          <a href="#">Eliminar</a> |
+          <a href="#">Detalles</a> |
+          <a href="#">Otra Acción</a>
+        </td>
+      </tr>
+
+      <!-- Fila ejemplo 2 -->
+      <tr>
+        <td>2</td>
+        <td>Laura Martínez</td>
+        <td>3000</td>
+        <td>3200</td>
+        <td>3100</td>
+        <td>3500</td>
+        <td>12800</td>
+        <td>
+          <a href="#">Editar</a> |
+          <a href="#">Eliminar</a> |
+          <a href="#">Detalles</a> |
+          <a href="#">Otra Acción</a>
+        </td>
+      </tr>
+
+      <!-- Puedes duplicar más filas con más usuarios -->
+    </tbody>
+  </table>
+    <footer>
+  <div class="footer-content">
+    <h3>Manufacturas Zuluaga S.A.S</h3>
+    <p>Comprometidos en el desarrollo social, personal y laboral.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 @Juandv.</p>
+  </div>
+</footer>
+</body>
+</html>
