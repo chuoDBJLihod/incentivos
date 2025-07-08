@@ -1,0 +1,36 @@
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm.php on line 11
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm.php on line 64
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm2.php on line 10
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm2.php on line 63
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm3.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm3.php on line 61
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm4.php on line 9
+[16-Nov-2024 15:57:22 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerm4.php on line 135
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp.php on line 12
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp.php on line 77
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp2.php on line 11
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp2.php on line 60
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp3.php on line 11
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp3.php on line 61
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp4.php on line 10
+[16-Nov-2024 15:57:26 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/registerp4.php on line 61
+[16-Nov-2024 15:57:28 UTC] PHP Notice:  Undefined variable: host in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:28 UTC] PHP Notice:  Undefined variable: base_de_datos in /home/a3gf76a1m0an/public_html/config/conexion.php on line 9
+[16-Nov-2024 15:57:28 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/agregar_incentivos.php on line 13
+[16-Nov-2024 15:57:28 UTC] PHP Notice:  Trying to get property 'num_rows' of non-object in /home/a3gf76a1m0an/public_html/views/agregar_incentivos.php on line 165
