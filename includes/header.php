@@ -34,18 +34,11 @@
 
         <!-- Button -->
         <div class="navbar__button">
-            <a href="../views/menu.php" class="btn">Volver al Inicio</a>
+            <a href="../views/menu.html" class="btn">Volver al Inicio</a>
         </div>
     </nav>
 </header>
 
-<script>
-    function toggleDropdown(event) {
-        event.preventDefault();
-        const dropdown = event.target.nextElementSibling;
-        dropdown.classList.toggle('active');
-    }
-</script>
 
 </body>
 </html>
