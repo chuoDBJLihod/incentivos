@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagrama Interactivo de Eficiencia y Valor por Módulo</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .grafico-container {
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Diagrama Interactivo de Eficiencia y Valor por Módulo (Semana)</h2>
+
+  <center>
+    <h2>Semana 1</h2>
+    <p>Incentivos del: 2024-06-01 al 2024-06-07</p>
+  </center>
+  <div id="grafico1" class="grafico-container"></div>
+
+  <center>
+    <h2>Semana 2</h2>
+    <p>Incentivos del: 2024-06-08 al 2024-06-14</p>
+  </center>
+  <div id="grafico2" class="grafico-container"></div>
+
+  <center>
+    <h2>Semana 3</h2>
+    <p>Incentivos del: 2024-06-15 al 2024-06-21</p>
+  </center>
+  <div id="grafico3" class="grafico-container"></div>
+
+  <center>
+    <h2>Semana 4</h2>
+    <p>Incentivos del: 2024-06-22 al 2024-06-28</p>
+  </center>
+  <div id="grafico4" class="grafico-container"></div>
+
+  <script>
+    const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+
+    // Datos de ejemplo para 3 módulos en cada semana
+    const ejemploSemana = () => [
+      {
+        modulo: "M1",
+        eficiencia_lunes: 80,
+        eficiencia_martes: 75,
+        eficiencia_miercoles: 78,
+        eficiencia_jueves: 82,
+        eficiencia_viernes: 77,
+        eficiencia_sabado: 70,
+        valor_lunes: 4000,
+        valor_martes: 4500,
+        valor_miercoles: 4200,
+        valor_jueves: 4600,
+        valor_viernes: 4400,
+        valor_sabado: 3900
+      },
+      {
+        modulo: "M2",
+        eficiencia_lunes: 85,
+        eficiencia_martes: 88,
+        eficiencia_miercoles: 83,
+        eficiencia_jueves: 87,
+        eficiencia_viernes: 86,
+        eficiencia_sabado: 80,
+        valor_lunes: 4700,
+        valor_martes: 5000,
+        valor_miercoles: 4900,
+        valor_jueves: 5100,
+        valor_viernes: 4950,
+        valor_sabado: 4600
+      },
+      {
+        modulo: "M3",
+        eficiencia_lunes: 70,
+        eficiencia_martes: 72,
+        eficiencia_miercoles: 74,
+        eficiencia_jueves: 71,
+        eficiencia_viernes: 73,
+        eficiencia_sabado: 69,
+        valor_lunes: 3500,
+        valor_martes: 3600,
+        valor_miercoles: 3700,
+        valor_jueves: 3550,
+        valor_viernes: 3650,
+        valor_sabado: 3400
+      }
+    ];
+
+    const data1 = ejemploSemana();
+    const data2 = ejemploSemana();
+    const data3 = ejemploSemana();
+    const data4 = ejemploSemana();
+
+    function createGraph(data, graphId) {
+      const traces = data.map((modulo, index) => ({
+        x: diasSemana,
+        y: [
+          modulo.eficiencia_lunes,
+          modulo.eficiencia_martes,
+          modulo.eficiencia_miercoles,
+          modulo.eficiencia_jueves,
+          modulo.eficiencia_viernes,
+          modulo.eficiencia_sabado
+        ],
+        mode: 'lines+markers',
+        name: `Módulo ${modulo.modulo}`,
+        line: {
+          color: `rgba(${(index * 80) % 255}, ${(index * 50) % 255}, ${(index * 120) % 255}, 1)`,
+          width: 3
+        },
+        marker: { size: 8 },
+        text: [
+          `Eficiencia: ${modulo.eficiencia_lunes}%<br>Valor: $${modulo.valor_lunes}`,
+          `Eficiencia: ${modulo.eficiencia_martes}%<br>Valor: $${modulo.valor_martes}`,
+          `Eficiencia: ${modulo.eficiencia_miercoles}%<br>Valor: $${modulo.valor_miercoles}`,
+          `Eficiencia: ${modulo.eficiencia_jueves}%<br>Valor: $${modulo.valor_jueves}`,
+          `Eficiencia: ${modulo.eficiencia_viernes}%<br>Valor: $${modulo.valor_viernes}`,
+          `Eficiencia: ${modulo.eficiencia_sabado}%<br>Valor: $${modulo.valor_sabado}`
+        ],
+        hoverinfo: 'text'
+      }));
+
+      const layout = {
+        title: 'Eficiencia y Valor por Módulo en la Semana',
+        xaxis: { title: 'Días de la Semana' },
+        yaxis: { title: 'Eficiencia (%)' },
+        showlegend: true,
+        height: 450
+      };
+
+      Plotly.newPlot(graphId, traces, layout);
+    }
+
+    createGraph(data1, 'grafico1');
+    createGraph(data2, 'grafico2');
+    createGraph(data3, 'grafico3');
+    createGraph(data4, 'grafico4');
+  </script>
+</body>
+
+</html>
