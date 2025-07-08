@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Resumen Incentivos</title>
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+  <style>
+    body {
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+    }
+    h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-top: 20px;
+        font-weight: 700;
+    }
+    a {
+        text-decoration: none;
+    }
+    table {
+        width: 100%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        table-layout: fixed;
+    }
+    th, td {
+        padding: 9px 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+    th:not(:last-child), td:not(:last-child) {
+        width: calc(100% / 7);
+    }
+    th:last-child, td:last-child {
+        width: calc(100% / 7 * 2);
+    }
+    th {
+        background-color: #34495e;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+    tr:hover {
+        background-color: #e1f5fe;
+        transition: background-color 0.3s ease;
+    }
+    input[type="number"] {
+        width: 80px;
+        padding: 5px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+    input[type="submit"] {
+        background-color: #1abc9c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 20px auto;
+        display: block;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    input[type="submit"]:hover {
+        background-color: #16a085;
+    }
+    .btn {
+        display: inline-block;
+        padding: 8px 12px;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 4px;
+        margin: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+    }
+    .btn-success {
+        background-color: #27ae60;
+    }
+    .btn-success:hover {
+        background-color: #219150;
+    }
+    .btn-info {
+        background-color: #2980b9;
+    }
+    .btn-info:hover {
+        background-color: #21618c;
+    }
+    .btn-danger {
+        background-color: #e74c3c;
+    }
+    .btn-danger:hover {
+        background-color: #c0392b;
+    }
+    .action-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    @media (max-width: 768px) {
+        table, th, td {
+            font-size: 12px;
+        }
+        input[type="number"] {
+            width: 60px;
+        }
+        .btn {
+            font-size: 12px;
+            padding: 6px 10px;
+        }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+    <nav class="navbar">
+        <!-- Brand -->
+        <div class="navbar__brand">
+            <img src="../assets/img/logo.avif" alt="Logo" class="navbar__logo" style="height: 50px; width: 50px;">
+            <h1 class="navbar__title">Manufacturas Zuluaga</h1>
+        </div>
+
+        <!-- Menu -->
+        <ul class="navbar__menu">
+            <li class="navbar__item"><a href="../views/menu.php" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item">
+                <a href="#" class="navbar__link" onclick="toggleDropdown(event)">Incentivos</a>
+                <ul class="dropdown-menu">
+                    <li><a href="../views/registerm.php" class="dropdown-item">Incentivo Modular</a></li>
+                    <li><a href="../views/registerp.php" class="dropdown-item">Incentivo Precilla</a></li>
+                </ul>
+            </li>
+            <li class="navbar__item"><a href="../views/login.php" class="navbar__link">Registro</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Gráficos</a></li>
+        </ul>
+
+        <!-- Button -->
+        <div class="navbar__button">
+            <a href="../views/menu.html" class="btn">Volver al Inicio</a>
+        </div>
+    </nav>
+</header>
+
+  <br>
+  <a href="#" class="btn btn-success">Validar pagos excel</a>
+  <a href="#" class="btn btn-success">Tablas de seguimiento</a>
+  <a href="#" class="btn btn-success">Cambiar usuarios de módulo</a>
+
+  <h2>Modulares</h2>
+
+  <form>
+    <table>
+      <thead>
+        <tr>
+          <th>Módulo</th>
+          <th>Nombre de Usuario</th>
+          <th>13/05 al 18/05</th>
+          <th>20/05 al 25/05</th>
+          <th>27/05 al 01/06</th>
+          <th>03/06 al 08/06</th>
+          <th>Total</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Juan Pérez</td>
+          <td><input type="number" value="4000"></td>
+          <td><input type="number" value="5000"></td>
+          <td><input type="number" value="4500"></td>
+          <td><input type="number" value="5500"></td>
+          <td>19000</td>
+          <td>
+            <div class="action-icons">
+              <a href="#" class="btn btn-success">Modular</a>
+              <a href="#" class="btn btn-info">Usuario</a>
+              <a href="#" class="btn btn-danger">Selección</a>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>Camila Rodríguez</td>
+          <td><input type="number" value="3000"></td>
+          <td><input type="number" value="3200"></td>
+          <td><input type="number" value="3100"></td>
+          <td><input type="number" value="3300"></td>
+          <td>12600</td>
+          <td>
+            <div class="action-icons">
+              <a href="#" class="btn btn-success">Modular</a>
+              <a href="#" class="btn btn-info">Usuario</a>
+              <a href="#" class="btn btn-danger">Selección</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Precilla</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre de Usuario</th>
+          <th>13/05 al 18/05</th>
+          <th>20/05 al 25/05</th>
+          <th>27/05 al 01/06</th>
+          <th>03/06 al 08/06</th>
+          <th>Total</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Ana Torres</td>
+          <td><input type="number" value="4200"></td>
+          <td><input type="number" value="4300"></td>
+          <td><input type="number" value="4400"></td>
+          <td><input type="number" value="4500"></td>
+          <td>17400</td>
+          <td>
+            <div class="action-icons">
+              <a href="#" class="btn btn-success">Modular</a>
+              <a href="#" class="btn btn-info">Usuario</a>
+              <a href="#" class="btn btn-danger">Selección</a>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input type="submit" value="Actualizar Incentivos">
+    <center>
+      <button type="button" onclick="reiniciarValores()" class="btn btn-danger">Reiniciar Valores</button>
+    </center>
+  </form>
+
+  <script>
+    function reiniciarValores() {
+      const inputs = document.querySelectorAll('form input[type="number"]');
+      inputs.forEach(input => {
+        input.value = 0;
+      });
+    }
+  </script>
+      <footer>
+  <div class="footer-content">
+    <h3>Manufacturas Zuluaga S.A.S</h3>
+    <p>Comprometidos en el desarrollo social, personal y laboral.</p>
+    <ul class="socials">
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+    </ul>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2024 @Juandv.</p>
+  </div>
+</footer>
+</body>
+</html>
